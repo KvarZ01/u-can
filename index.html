@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цитаты из игр</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        #quote {
+            font-size: 28px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            border-radius: 10px;
+        }
+        button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #e03e00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Цитаты из игр</h1>
+    <p id="quote">Нажми на кнопку, чтобы увидеть цитату!</p>
+    <button onclick="showQuote()">Новая цитата</button>
+
+    <script>
+        const quotes = [
+            "Что, спать хочешь? А нельзя, родной, нельзя… – Metro 2033",
+            "Война. Война никогда не меняется. – Fallout",
+            "А знаешь, что такое безумие? – Far Cry 3",
+            "Не важно, кто перед тобой… Важно, кто стоит за твоей спиной. – The Witcher 3",
+            "Would you kindly? (Будь добр…) – BioShock",
+            "В нужное время, в нужном месте, один человек может изменить мир. – Half-Life 2",
+            "Слава Солнцу! – Dark Souls",
+            "Нельзя просто так взять и войти в Мордор. – The Lord of the Rings (из игр и мемов)",
+            "Если за каждое убийство давали по рублю, я был бы миллиардером. – Hitman",
+            "Смерть - не освобождение. – Doom",
+            "На войне не бывает настоящих победителей. – Call of Duty",
+            
+            // Цитаты из Uncharted
+            "Я – хороший парень, когда меня узнаёшь получше. – Uncharted",
+            "Рисковать – это то, что делает жизнь интересной. – Uncharted 2",
+            "Все величайшие открытия начинались с риска. – Uncharted 3",
+            "В конце концов, мы — это не то, что мы взяли... а то, что мы оставили. – Uncharted 4",
+            "Ты либо двигаешься дальше, либо остаешься позади. – Uncharted: The Lost Legacy",
+            
+            // Ещё культовые цитаты из других игр
+            "Смерть - лишь очередная дверь. – Dark Souls",
+            "Время — это иллюзия, но если ты опоздаешь, она станет реальностью. – Prince of Persia",
+            "Сейчас или никогда. – Cyberpunk 2077",
+            "Я проснулся в холодном поту. Это был не сон… это был кошмар. – Max Payne",
+            "Какой же ты упрямый… Я люблю упрямых. – Metal Gear Solid",
+            "Никогда не сдавайся. Борись до конца. – God of War",
+            "Победа — это не случайность. – Apex Legends",
+            "Я чувствую… потрясение в Силе. – Star Wars: Jedi Fallen Order",
+            "Мы живём в обществе. – Joker (Batman, но популярно в играх)",
+            "Только вперёд. Назад дороги нет. – Red Dead Redemption 2"
+        ];
+
+        function showQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").textContent = quotes[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
